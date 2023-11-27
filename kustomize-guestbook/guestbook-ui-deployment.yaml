@@ -12,6 +12,8 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
+        ssd.admissionreview.accountname: qaadmin
+        ssd.admissionreview.appname: guestbook-ui
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
