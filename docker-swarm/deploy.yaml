@@ -18,4 +18,4 @@ spec:
     spec:
       containers:
       - name: docker-swarm-visualizer
-        image: opsmx11/docker-swarm-dev:f76bf00-431
+        image: opsmx11/docker-swarm-dev:f76bf00-464
