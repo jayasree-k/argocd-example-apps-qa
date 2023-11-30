@@ -16,7 +16,7 @@ spec:
           curl -sSL -o /usr/local/bin/argocd https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
           chmod +x /usr/local/bin/argocd
           
-          argopassword=$(kubectl get secret argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d)
+          argopassword=$(kubectl get secret -n default argocd-initial-admin-secret -o jsonpath='{.data.password}' | base64 -d)
           argocd login ssdargo.hyd-qa.opsmx.net --username=admin --password=$argopassword --grpc-web
           
           hostvalue=$(echo ${HOSTNAME::-6})
